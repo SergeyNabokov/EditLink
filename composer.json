@@ -1,0 +1,21 @@
+{
+    "name": "snabokov/yii2-edit-link-widget",
+    "description": "Add edit link widget to your page",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "SergeyNabokov",
+            "email": "serj.nabokov@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "snabokov\\editlink\\": ""
+        }
+    }
+}
