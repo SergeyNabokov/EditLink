@@ -13,7 +13,7 @@
     "require": {
         "yiisoft/yii2": "*"
     },
-    "minimum-stability": "dev-master",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "snabokov\\editlink\\": ""
