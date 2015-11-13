@@ -3,7 +3,7 @@
     "description": "Add edit link widget to your page",
     "type": "yii2-extension",
     "keywords": ["yii2","extension"],
-    "license": "GPL-3.0+",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "SergeyNabokov",
