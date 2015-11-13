@@ -2,7 +2,7 @@
 
 namespace snabokov\editlink;
 
-//use app\widgets\EditLinkAsset;
+use app\widgets\EditLinkAsset;
 use yii\helpers\Json;
 use yii\helpers\BaseUrl;
 use yii\base\InvalidConfigException;
