@@ -61,7 +61,7 @@ class EditLink extends \Yii\base\Widget
         EditLinkAsset::register($view);
         
         $primaryKey = array_shift($this->model->tableSchema->primaryKey);
-        $path = Json::encode(Url::to(['update', $primaryKey => $this->model->{$primaryKey}]));
+        $path = Json::encode(Url::to(['update', 'id' => $this->model->{$primaryKey}]));
         $options = empty($this->options) ? '{}' : Json::encode($this->options);
         
         $js = "$.editLink($path, $options);";
