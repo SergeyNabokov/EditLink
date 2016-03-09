@@ -1,11 +1,15 @@
 <?php
-
 namespace snabokov\editlink;
 
 use yii\helpers\Json;
-use yii\helpers\BaseUrl;
+use yii\helpers\Url;
 use yii\base\InvalidConfigException;
 
+/**
+ * EditLink widget.
+ * 
+ * @author SergeyNabokov
+ */
 class EditLink extends \Yii\base\Widget
 {
     /**
@@ -56,7 +60,8 @@ class EditLink extends \Yii\base\Widget
         $view = $this->getView();
         EditLinkAsset::register($view);
         
-        $path = Json::encode(BaseUrl::to(['update', 'id' => $this->model->id]));
+        $primaryKey = array_shift($this->model->tableSchema->primaryKey);
+        $path = Json::encode(Url::to(['update', $primaryKey => $this->model->{$primaryKey}]));
         $options = empty($this->options) ? '{}' : Json::encode($this->options);
         
         $js = "$.editLink($path, $options);";
